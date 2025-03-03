@@ -1,0 +1,45 @@
+{% extends "common/column_left.twig" %}
+{% block content %}
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">{{ heading_title }}</h3>
+      <div class="float-right">
+        <a href="{{ clear }}" class="btn btn-danger">{{ button_clear_log }}</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>{{ column_product_id }}</th>
+              <th>{{ column_platform }}</th>
+              <th>{{ column_status }}</th>
+              <th>{{ column_message }}</th>
+              <th>{{ column_date_added }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% if logs %}
+              {% for log in logs %}
+              <tr>
+                <td>{{ log.product_id }}</td>
+                <td>{{ log.platform }}</td>
+                <td>{{ log.status }}</td>
+                <td>{{ log.message }}</td>
+                <td>{{ log.date_added }}</td>
+              </tr>
+              {% endfor %}
+            {% else %}
+              <tr>
+                <td colspan="5">No logs found</td>
+              </tr>
+            {% endif %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
