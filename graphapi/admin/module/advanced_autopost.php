@@ -1,7 +1,8 @@
+<?php
+
 // Note: I used $this->logPost() without passing the product_id. You could easily extend it by passing the product_id to logPost() so you can see which product was posted. For clarity, we left product_id = 0 in the example. Consider updating: 
 // $this->logPost('instagram', $log_status, $log_msg, $product_id);
 
-<?php
 class ModelExtensionModuleAdvancedAutopost extends Model {
     public function createAutopostLogTable() {
         $this->db->query("
