@@ -3,8 +3,8 @@
   <name>Advanced Autopost - "Post Now" Button</name>
   <code>advanced_autopost_button</code>
   <version>1.0</version>
-  <author>YourName</author>
-  <link>YourLink</link>
+  <author>Alexander Mirvis</author>
+  <link>https://www.nepa-it-consulting.com</link>
 
   <file path="admin/view/template/catalog/product_form.twig">
     <!-- Insert a "Post Now" button near the Save button -->
