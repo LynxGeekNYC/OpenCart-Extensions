@@ -39,7 +39,7 @@ advanced_autopost/
     │   └── config/
     └── ocmod.xml (Optional, if you need to modify product form twig to add a "Post Now" button)
 
-#SQL: 
+# SQL: 
 
 Store post logs in a custom table: oc_advanced_autopost_log
 
