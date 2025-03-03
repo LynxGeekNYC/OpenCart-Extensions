@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>Advanced Autopost - "Post Now" Button</name>
+  <code>advanced_autopost_button</code>
+  <version>1.0</version>
+  <author>YourName</author>
+  <link>YourLink</link>
+
+  <file path="admin/view/template/catalog/product_form.twig">
+    <!-- Insert a "Post Now" button near the Save button -->
+    <operation>
+      <search position="after"><![CDATA[<button type="submit" form="form-product"]]></search>
+      <add>
+        <![CDATA[
+        <a href="{{ url('extension/module/advanced_autopost_button/post', 'product_id=' ~ product_id ~ '&user_token=' ~ user_token) }}" class="btn btn-warning" style="margin-left:10px;">
+          <i class="fa fa-share"></i> Post Now
+        </a>
+        ]]>
+      </add>
+    </operation>
+  </file>
+</modification>
